@@ -11,6 +11,8 @@ a#i3fb-btn-container {
   z-index: 99999;
   padding: 0.5em 0.8em;
   letter-spacing: 0.1em;
+  color: #000000;
+  background: #808080;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg); 
   -moz-transform: rotate(90deg); 

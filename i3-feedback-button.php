@@ -4,7 +4,7 @@ Plugin Name: i3 Feedback Button
 Plugin URI: 
 Description: Displays a static button, on the left or right side of the page, which lets you open an post or page in an thickbox window.
 Author: Mo
-Version: 1.0
+Version: 1.1
 Author URI: 
 */
 
@@ -28,6 +28,10 @@ function i3fb_template_function() {
     $i3fb_options = get_option( 'APF_i3fb_Fields' ); // Get the admin options
         $i3fb_page_id = $i3fb_options['i3fb_page_id']; // Grab the page id
         $i3fb_btn_txt = $i3fb_options['i3fb_btn_txt']; // Grab the button text
+        if (empty($i3fb_options['i3fb_btn_txt'])) { // If height is empty, insert default
+               $i3fb_btn_txt = 'FEEDBACK';
+        }
+
         $i3fb_position = $i3fb_options['i3fb_position']; // Grab the position
         $i3fb_colors = $i3fb_options['i3fb_colors']; // Get all color options
             $i3fb_color_bg = $i3fb_colors[0]; // Grab first color (bg)

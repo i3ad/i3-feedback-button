@@ -37,6 +37,10 @@ Visit `Settings > i3 Feedback Button` to add an post or page ID and change other
 
 ## Changelog
 
+### 1.1
+* Added default/fallback button text
+* Added default/fallback button text-color and background-color
+
 ### 1.0
 * First push
 
