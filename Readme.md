@@ -2,16 +2,16 @@
 
 ## Plugin Information
 
-Displays a static button, on the left or right side of the page, which lets you open an post or page in an thickbox window.
+Displays a static button, on the left or right side of the website, which lets you open a page in an thickbox window.
 
 ### Features
 
+* Easy page select
 * You can add your own button text
-* Change the button position
-* Change the position from top
+* Change the button left, right and top position
 * Change button background-color and text-color
 * Change the width and height of the thickbox window
-* Languages files included: english, german
+* Language files included: english, german
 
 ***
 
@@ -25,17 +25,24 @@ Displays a static button, on the left or right side of the page, which lets you 
 
 ## Usage
 
-Visit `Settings > i3 Feedback Button` to add an post or page ID and change other options.
+Visit `Settings > Feedback Button` to select a page and change other options.
 
 ***
 
 ## Contributors
 
-- [Admin Page Framework](https://github.com/michaeluno/admin-page-framework) - Provides simpler means of building administration pages for plugin and theme developers.
+- [Chosen](http://harvesthq.github.io/chosen/) - Chosen is a jQuery plugin that makes long, unwieldy select boxes much more user-friendly.
 
 ***
 
 ## Changelog
+
+### 1.2
+* Updated translations
+* New admin options page (removed APF)
+* Added "Chosen" to page select
+* Reworked plugin base structure
+* Reworked plugin base code
 
 ### 1.1
 * Added default/fallback button text

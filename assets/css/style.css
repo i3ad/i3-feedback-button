@@ -7,19 +7,19 @@ a#i3fb-btn-container {
   display: block;
   left: 0;
   position: fixed;
-  top: 450px;
+  top: 40%;
   z-index: 99999;
   padding: 0.5em 0.8em;
   letter-spacing: 0.1em;
   color: #000000;
-  background: #808080;
+  background: #dddddd;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg); 
   -moz-transform: rotate(90deg); 
- filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
- transform-origin: 0 100% 0;
- -webkit-transform-origin: 0 100% 0;
- -ms-transform-origin: 0 100% 0;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transform-origin: 0 100% 0;
+  -webkit-transform-origin: 0 100% 0;
+  -ms-transform-origin: 0 100% 0;
 }
 
 a#i3fb-btn-container.right {
@@ -28,14 +28,11 @@ a#i3fb-btn-container.right {
   transform: rotate(270deg);
   -webkit-transform: rotate(270deg); 
   -moz-transform: rotate(270deg); 
- filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
- transform-origin: 100% 100% 0;
- -webkit-transform-origin: 100% 100% 0;
- -ms-transform-origin: 100% 100% 0;
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  transform-origin: 100% 100% 0;
+  -webkit-transform-origin: 100% 100% 0;
+  -ms-transform-origin: 100% 100% 0;
 }
-
-
-
 
 /* Clearfix */
 .cf:before,
