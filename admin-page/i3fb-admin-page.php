@@ -103,15 +103,6 @@ function i3fb_settings_init() {
 		'i3fb_section_btn' 
 	);
 
-	// Button text setting
-	add_settings_field( 
-		'i3fb_btn_txt_field', 
-		__( 'Button text', 'i3fb-plugin' ), 
-		'i3fb_btn_txt_field_render', 
-		'pluginPage', 
-		'i3fb_section_btn' 
-	);
-
 	// Button position setting
 	add_settings_field( 
 		'i3fb_btn_pos_field', 
@@ -139,14 +130,42 @@ function i3fb_settings_init() {
 		'i3fb_section_btn' 
 	);
 
-	// Button text color setting
+	// Button top and bottom padding
 	add_settings_field( 
-		'i3fb_btn_txt_color_field', 
-		__( 'Button text color', 'i3fb-plugin' ), 
-		'i3fb_btn_txt_color_field_render', 
+		'i3fb_btn_padding_tb', 
+		__( 'Button Padding Top/Bottom (px)', 'i3fb-plugin' ), 
+		'i3fb_btn_padding_tb_render', 
+		'pluginPage', 
+		'i3fb_section_btn'
+	);
+
+	// Button left and right padding
+	add_settings_field( 
+		'i3fb_btn_padding_lr', 
+		__( 'Button Padding Left/Right (px)', 'i3fb-plugin' ), 
+		'i3fb_btn_padding_lr_render', 
+		'pluginPage', 
+		'i3fb_section_btn'
+	);
+
+	// Button text setting
+	add_settings_field( 
+		'i3fb_btn_txt_field', 
+		__( 'Button text', 'i3fb-plugin' ), 
+		'i3fb_btn_txt_field_render', 
 		'pluginPage', 
 		'i3fb_section_btn' 
 	);
+
+	// Button typographie
+	add_settings_field( 
+		'i3fb_btn_typo', 
+		__( 'Button Typographie', 'i3fb-plugin' ), 
+		'i3fb_btn_typo_render', 
+		'pluginPage', 
+		'i3fb_section_btn'
+	);
+
 
 /* Thickbox setting fields */
 
@@ -165,7 +184,7 @@ function i3fb_settings_init() {
 		__( 'Thickbox width (px)', 'i3fb-plugin' ), 
 		'i3fb_tbwidth_field_render', 
 		'pluginPage', 
-		'i3fb_section_tb' 
+		'i3fb_section_tb'
 	);
 
 }
@@ -181,12 +200,13 @@ function i3fb_btn_pselect_field_render(  ) {
 	$options = get_option( 'i3fb_settings' ); ?>
 
 	<select data-placeholder='<?php _e('Select a Page', 'i3fb-plugin'); ?>' style='width:300px;' class='chosen-select' name='i3fb_settings[i3fb_btn_pselect_field]'>
+		<option value='0'></option>
 		<?php $pages = get_pages(); ?>
 		<?php foreach( $pages as $page ) { ?>
 			<option value='<?php echo $page->ID; ?>' <?php selected( $options['i3fb_btn_pselect_field'], $page->ID ); ?>><?php echo $page->post_title; ?></option>
 		<?php }; ?>
 	</select>
-	<p><em><?php _e('Define the page you want to oben in the Thickbox window.', 'i3fb-plugin'); ?></em></p>
+	<p class="description"><em><?php _e('Define the page you want to open in the Thickbox window.', 'i3fb-plugin'); ?></em></p>
 
 	<?php
 }
@@ -215,7 +235,7 @@ function i3fb_btn_top_field_render(  ) {
 	$options = get_option( 'i3fb_settings' ); ?>
 
 	<input type='text' name='i3fb_settings[i3fb_btn_top_field]' value='<?php if (empty($options['i3fb_btn_top_field'])) { echo '40'; }else{ echo $options['i3fb_btn_top_field']; }; ?>'>
-	<p><em><?php _e('Default:', 'i3fb-plugin'); ?> <code>40</code></em></p>
+	<p class="description"><em><?php _e('Default:', 'i3fb-plugin'); ?> <code>40</code></em></p>
 	
 	<?php
 }
@@ -229,11 +249,73 @@ function i3fb_btn_bg_color_field_render(  ) {
 	<?php
 }
 
-// Button text color field
-function i3fb_btn_txt_color_field_render(  ) { 
+// Button padding top and bottom
+function i3fb_btn_padding_tb_render( $args ) { 
 	$options = get_option( 'i3fb_settings' ); ?>
 
-	<input class='wp-color-picker-field' type='text' name='i3fb_settings[i3fb_btn_txt_color_field]' value='<?php if (empty($options['i3fb_btn_txt_color_field'])) { echo '#000000'; }else{ echo $options['i3fb_btn_txt_color_field']; }; ?>'>
+		<label for='i3fb_settings[i3fb_btn_padding_top]'><?php _e('Top', 'i3fb-plugin'); ?></label>
+		<input size='10' type='text' name='i3fb_settings[i3fb_btn_padding_top]' value='<?php if (empty($options['i3fb_btn_padding_top'])) { echo '10'; }else{ echo $options['i3fb_btn_padding_top']; }; ?>'>
+
+		<label for='i3fb_settings[i3fb_btn_padding_bottom]'><?php _e('Bottom', 'i3fb-plugin'); ?></label>
+		<input size='10' type='text' name='i3fb_settings[i3fb_btn_padding_bottom]' value='<?php if (empty($options['i3fb_btn_padding_bottom'])) { echo '10'; }else{ echo $options['i3fb_btn_padding_bottom']; }; ?>'>
+
+	<p class="description"><em><?php _e('Enter the desired button padding. Default:', 'i3fb-plugin'); ?> <code>10</code></em></p>	
+	
+	<?php 
+}
+
+// Button padding left and right
+function i3fb_btn_padding_lr_render( $args ) { 
+	$options = get_option( 'i3fb_settings' ); ?>
+
+		<label for='i3fb_settings[i3fb_btn_padding_left]'><?php _e('Left', 'i3fb-plugin'); ?></label>
+		<input size='10' type='text' name='i3fb_settings[i3fb_btn_padding_left]' value='<?php if (empty($options['i3fb_btn_padding_left'])) { echo '15'; }else{ echo $options['i3fb_btn_padding_left']; }; ?>'>
+
+		<label for='i3fb_settings[i3fb_btn_padding_right]'><?php _e('Right', 'i3fb-plugin'); ?></label>
+		<input size='10' type='text' name='i3fb_settings[i3fb_btn_padding_right]' value='<?php if (empty($options['i3fb_btn_padding_right'])) { echo '15'; }else{ echo $options['i3fb_btn_padding_right']; }; ?>'>
+
+	<p class="description"><em><?php _e('Enter the desired button padding. Default:', 'i3fb-plugin'); ?> <code>15</code></em></p>	
+	
+	<?php 
+}
+
+// Button typographie
+function i3fb_btn_typo_render( $args ) { 
+	$options = get_option( 'i3fb_settings' ); ?>
+
+	<span style="vertical-align:top;">
+
+		<select data-placeholder='13px' style='width:80px;' class='chosen-select' name='i3fb_settings[i3fb_btn_typo_size]'>
+			<option value='13'></option>
+			<option value='9' <?php selected( $options['i3fb_btn_typo_size'], '9' ); ?>>9px</option>
+			<option value='10' <?php selected( $options['i3fb_btn_typo_size'], '10' ); ?>>10px</option>
+			<option value='11' <?php selected( $options['i3fb_btn_typo_size'], '11' ); ?>>11px</option>
+			<option value='12' <?php selected( $options['i3fb_btn_typo_size'], '12' ); ?>>12px</option>
+			<option value='13' <?php selected( $options['i3fb_btn_typo_size'], '13' ); ?>>13px</option>
+			<option value='14' <?php selected( $options['i3fb_btn_typo_size'], '14' ); ?>>14px</option>
+			<option value='15' <?php selected( $options['i3fb_btn_typo_size'], '15' ); ?>>15px</option>
+			<option value='16' <?php selected( $options['i3fb_btn_typo_size'], '16' ); ?>>16px</option>
+			<option value='17' <?php selected( $options['i3fb_btn_typo_size'], '17' ); ?>>17px</option>
+			<option value='18' <?php selected( $options['i3fb_btn_typo_size'], '18' ); ?>>18px</option>
+			<option value='19' <?php selected( $options['i3fb_btn_typo_size'], '19' ); ?>>19px</option>
+			<option value='20' <?php selected( $options['i3fb_btn_typo_size'], '20' ); ?>>20px</option>
+			<option value='21' <?php selected( $options['i3fb_btn_typo_size'], '21' ); ?>>21px</option>
+			<option value='22' <?php selected( $options['i3fb_btn_typo_size'], '22' ); ?>>22px</option>
+			<option value='23' <?php selected( $options['i3fb_btn_typo_size'], '23' ); ?>>23px</option>
+			<option value='24' <?php selected( $options['i3fb_btn_typo_size'], '24' ); ?>>24px</option>
+		</select>
+
+		<select data-placeholder='Normal' style='width:100px;' class='chosen-select' name='i3fb_settings[i3fb_btn_typo_style]'>
+			<option value='0'></option>
+			<option value='normal' <?php selected( $options['i3fb_btn_typo_style'], 'normal' ); ?>>Normal</option>
+			<option value='bold' <?php selected( $options['i3fb_btn_typo_style'], 'bold' ); ?>>Bold</option>
+		</select>
+
+	</span>
+
+	<input class='wp-color-picker-field' style='display:block;' type='text' name='i3fb_settings[i3fb_btn_txt_color_field]' value='<?php if (empty($options['i3fb_btn_txt_color_field'])) { echo '#000000'; }else{ echo $options['i3fb_btn_txt_color_field']; }; ?>'>
+
+	<p class="description"><em><?php _e('Select typography for the button.', 'i3fb-plugin'); ?></em></p>	
 	
 	<?php 
 }
@@ -245,7 +327,7 @@ function i3fb_tbheight_field_render(  ) {
 	$options = get_option( 'i3fb_settings' ); ?>
 
 	<input type='text' name='i3fb_settings[i3fb_tbheight_field]' value='<?php if (empty($options['i3fb_tbheight_field'])) { echo '400'; }else{ echo $options['i3fb_tbheight_field']; }; ?>'>
-	<p><em><?php _e('Default:', 'i3fb-plugin'); ?> <code>400</code></em></p>
+	<p class="description"><em><?php _e('Default:', 'i3fb-plugin'); ?> <code>400</code></em></p>
 	
 	<?php
 }
@@ -255,7 +337,7 @@ function i3fb_tbwidth_field_render(  ) {
 	$options = get_option( 'i3fb_settings' ); ?>
 
 	<input type='text' name='i3fb_settings[i3fb_tbwidth_field]' value='<?php if (empty($options['i3fb_tbwidth_field'])) { echo '300'; }else{ echo $options['i3fb_tbwidth_field']; }; ?>'>
-	<p><em><?php _e('Default:', 'i3fb-plugin'); ?> <code>300</code></em></p>
+	<p class="description"><em><?php _e('Default:', 'i3fb-plugin'); ?> <code>300</code></em></p>
 	
 	<?php
 }

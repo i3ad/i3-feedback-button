@@ -37,6 +37,12 @@ Visit `Settings > Feedback Button` to select a page and change other options.
 
 ## Changelog
 
+### 1.3
+* Added new typographie options
+* Added button padding options
+* Change implementation of frontpage styles
+* Updated translations
+
 ### 1.2
 * Updated translations
 * New admin options page (removed APF)

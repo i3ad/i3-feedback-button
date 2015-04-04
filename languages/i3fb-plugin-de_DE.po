@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: i3 Feedback Button v1.2\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2014-11-30 17:20:58+0000\n"
+"PO-Revision-Date: 2015-04-04 14:10:25+0000\n"
 "Last-Translator: admin <mo@moscouch.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -20,95 +20,128 @@ msgstr ""
 "X-Poedit-SearchPath-0: .\n"
 "X-Textdomain-Support: yes"
 
-#: admin-page/i3fb-admin-page.php:72
+#: admin-page/i3fb-admin-page.php:78
 #@ i3fb-plugin
 msgid "Button Settings"
 msgstr "Button Einstellungen"
 
-#: admin-page/i3fb-admin-page.php:80
+#: admin-page/i3fb-admin-page.php:86
 #@ i3fb-plugin
 msgid "Thichbox Settings"
 msgstr "Thickbox Einstellungen"
 
-#: admin-page/i3fb-admin-page.php:94
+#: admin-page/i3fb-admin-page.php:100
 #@ i3fb-plugin
 msgid "Button links to"
-msgstr "Verlinkung des Buttons"
+msgstr "Button Verlinkung"
 
-#: admin-page/i3fb-admin-page.php:103
+#: admin-page/i3fb-admin-page.php:154
 #@ i3fb-plugin
 msgid "Button text"
-msgstr "Beschriftung des Buttons"
+msgstr "Button Beschriftung"
 
-#: admin-page/i3fb-admin-page.php:112
+#: admin-page/i3fb-admin-page.php:109
 #@ i3fb-plugin
 msgid "Button position"
-msgstr "Position des Buttons"
+msgstr "Button Position"
 
-#: admin-page/i3fb-admin-page.php:121
+#: admin-page/i3fb-admin-page.php:118
 #@ i3fb-plugin
 msgid "Button top spacing (%)"
-msgstr "Oberer Abstand des Buttons (%)"
+msgstr "Button oberer Abstand (%)"
 
-#: admin-page/i3fb-admin-page.php:130
+#: admin-page/i3fb-admin-page.php:127
 #@ i3fb-plugin
 msgid "Button background color"
-msgstr "Hintergrundfarbe des Buttons"
+msgstr "Button Hintergrundfarbe"
 
-#: admin-page/i3fb-admin-page.php:139
-#@ i3fb-plugin
-msgid "Button text color"
-msgstr "Textfarbe des Buttons"
-
-#: admin-page/i3fb-admin-page.php:150
+#: admin-page/i3fb-admin-page.php:175
 #@ i3fb-plugin
 msgid "Thickbox height (px)"
 msgstr "Thickbox Höhe (px)"
 
-#: admin-page/i3fb-admin-page.php:159
+#: admin-page/i3fb-admin-page.php:184
 #@ i3fb-plugin
 msgid "Thickbox width (px)"
 msgstr "Thickbox Breite (px)"
 
-#: admin-page/i3fb-admin-page.php:177
+#: admin-page/i3fb-admin-page.php:202
 #@ i3fb-plugin
 msgid "Select a Page"
 msgstr "Wähle eine Seite"
 
-#: admin-page/i3fb-admin-page.php:183
+#: admin-page/i3fb-admin-page.php:209
 #@ i3fb-plugin
 msgid "Define the page you want to oben in the Thickbox window."
 msgstr "Lege fest, welche Seite in dem Thickbox-Fenster geöffnet werden soll."
 
-#: admin-page/i3fb-admin-page.php:201
+#: admin-page/i3fb-admin-page.php:227
+#: admin-page/i3fb-admin-page.php:271
 #@ i3fb-plugin
 msgid "Left"
 msgstr "Links"
 
-#: admin-page/i3fb-admin-page.php:202
+#: admin-page/i3fb-admin-page.php:228
+#: admin-page/i3fb-admin-page.php:274
 #@ i3fb-plugin
 msgid "Right"
 msgstr "Rechts"
 
-#: admin-page/i3fb-admin-page.php:212
-#: admin-page/i3fb-admin-page.php:242
-#: admin-page/i3fb-admin-page.php:252
+#: admin-page/i3fb-admin-page.php:238
+#: admin-page/i3fb-admin-page.php:330
+#: admin-page/i3fb-admin-page.php:340
 #@ i3fb-plugin
 msgid "Default:"
 msgstr "Standart:"
 
-#: admin-page/i3fb-admin-page.php:263
+#: admin-page/i3fb-admin-page.php:351
 #@ i3fb-plugin
 msgid "Change content and visual style of the Feedback Button."
-msgstr "Ändere die Verlinkung und das Aussehen des Buttons."
+msgstr "Hier kannst du das Aussehen und die Verlinkung des Buttons ändern."
 
-#: admin-page/i3fb-admin-page.php:268
+#: admin-page/i3fb-admin-page.php:356
 #@ i3fb-plugin
 msgid "Change the size of the Thickbox window."
-msgstr "Ändere die Größe des Thickbox-Fensters."
+msgstr "Hier kannst du die Größe des Thickbox-Fensterns anpassen."
 
-#: admin-page/i3fb-admin-page.php:278
+#: admin-page/i3fb-admin-page.php:366
 #@ i3fb-plugin
 msgid "Feedback Button Settings"
 msgstr "Feedback Button Einstellungen"
+
+#: admin-page/i3fb-admin-page.php:136
+#@ i3fb-plugin
+msgid "Button Padding Top/Bottom (px)"
+msgstr "Button Textabstand oben/unten (px)"
+
+#: admin-page/i3fb-admin-page.php:145
+#@ i3fb-plugin
+msgid "Button Padding Left/Right (px)"
+msgstr "Button Textabstand links/rechts (px)"
+
+#: admin-page/i3fb-admin-page.php:163
+#@ i3fb-plugin
+msgid "Button Typographie"
+msgstr "Button Typografie"
+
+#: admin-page/i3fb-admin-page.php:256
+#@ i3fb-plugin
+msgid "Top"
+msgstr "Oben"
+
+#: admin-page/i3fb-admin-page.php:259
+#@ i3fb-plugin
+msgid "Bottom"
+msgstr "Unten"
+
+#: admin-page/i3fb-admin-page.php:262
+#: admin-page/i3fb-admin-page.php:277
+#@ i3fb-plugin
+msgid "Enter the desired button padding. Default:"
+msgstr "Gebe den gewünschten Textabstand ein. Standart:"
+
+#: admin-page/i3fb-admin-page.php:318
+#@ i3fb-plugin
+msgid "Select typography for the button."
+msgstr "Bearbeite die Typografie des Buttons."
 

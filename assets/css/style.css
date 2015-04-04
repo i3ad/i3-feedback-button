@@ -4,14 +4,19 @@ html, body {
 }
 
 a#i3fb-btn-container {
+
   display: block;
   left: 0;
   position: fixed;
   top: 40%;
   z-index: 99999;
-  padding: 0.5em 0.8em;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
   letter-spacing: 0.1em;
   color: #000000;
+  font-size: 13px;
   background: #dddddd;
   transform: rotate(90deg);
   -webkit-transform: rotate(90deg); 
