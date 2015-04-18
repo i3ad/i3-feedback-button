@@ -4,7 +4,7 @@ Plugin Name: i3 Feedback Button
 Plugin URI: 
 Description: Displays a static button, on the left or right side of the website, which lets you open a page in an thickbox window.
 Author: Mo
-Version: 1.3
+Version: 1.4
 Author URI: 
 */
 
@@ -63,18 +63,6 @@ function i3fb_style_function() {
     // Get the button text color
     $i3fb_btn_txt = $i3fb_option['i3fb_btn_txt_color_field'];
 
-    // Get the button top padding
-    $i3fb_pad_top = $i3fb_option['i3fb_btn_padding_top'];
-
-    // Get the button bottom padding
-    $i3fb_pad_bot = $i3fb_option['i3fb_btn_padding_bottom'];
-
-    // Get the button left padding
-    $i3fb_pad_lef = $i3fb_option['i3fb_btn_padding_left'];
-
-    // Get the button right padding
-    $i3fb_pad_rig = $i3fb_option['i3fb_btn_padding_right'];
-
     // Get the button font-size
     $i3fb_btn_fs = $i3fb_option['i3fb_btn_typo_size'];
 
@@ -90,10 +78,6 @@ function i3fb_style_function() {
             color:'.$i3fb_btn_txt.';
             font-size:'.$i3fb_btn_fs.'px;
             font-weight:'.$i3fb_btn_st.';
-            padding-top:'.$i3fb_pad_top.'px;
-            padding-bottom:'.$i3fb_pad_bot.'px;
-            padding-left:'.$i3fb_pad_lef.'px;
-            padding-right:'.$i3fb_pad_rig.'px;
         };
 
     </style>';
@@ -116,7 +100,7 @@ function i3fb_template_function() {
     // Get the button text field
     $i3fb_btn_caption = $i3fb_option['i3fb_btn_txt_field'];
     if (empty($i3fb_option['i3fb_btn_txt_field'])) {
-        $i3fb_btn_caption = 'Feedback'; // if is emtpy display this default text
+        $i3fb_btn_caption = __('Feedback', 'i3fb-plugin'); // if is emtpy display this default text
     }
 
     // Get the button position

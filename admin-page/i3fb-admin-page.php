@@ -130,24 +130,6 @@ function i3fb_settings_init() {
 		'i3fb_section_btn' 
 	);
 
-	// Button top and bottom padding
-	add_settings_field( 
-		'i3fb_btn_padding_tb', 
-		__( 'Button Padding Top/Bottom (px)', 'i3fb-plugin' ), 
-		'i3fb_btn_padding_tb_render', 
-		'pluginPage', 
-		'i3fb_section_btn'
-	);
-
-	// Button left and right padding
-	add_settings_field( 
-		'i3fb_btn_padding_lr', 
-		__( 'Button Padding Left/Right (px)', 'i3fb-plugin' ), 
-		'i3fb_btn_padding_lr_render', 
-		'pluginPage', 
-		'i3fb_section_btn'
-	);
-
 	// Button text setting
 	add_settings_field( 
 		'i3fb_btn_txt_field', 
@@ -249,36 +231,6 @@ function i3fb_btn_bg_color_field_render(  ) {
 	<?php
 }
 
-// Button padding top and bottom
-function i3fb_btn_padding_tb_render( $args ) { 
-	$options = get_option( 'i3fb_settings' ); ?>
-
-		<label for='i3fb_settings[i3fb_btn_padding_top]'><?php _e('Top', 'i3fb-plugin'); ?></label>
-		<input size='10' type='text' name='i3fb_settings[i3fb_btn_padding_top]' value='<?php if (empty($options['i3fb_btn_padding_top'])) { echo '10'; }else{ echo $options['i3fb_btn_padding_top']; }; ?>'>
-
-		<label for='i3fb_settings[i3fb_btn_padding_bottom]'><?php _e('Bottom', 'i3fb-plugin'); ?></label>
-		<input size='10' type='text' name='i3fb_settings[i3fb_btn_padding_bottom]' value='<?php if (empty($options['i3fb_btn_padding_bottom'])) { echo '10'; }else{ echo $options['i3fb_btn_padding_bottom']; }; ?>'>
-
-	<p class="description"><em><?php _e('Enter the desired button padding. Default:', 'i3fb-plugin'); ?> <code>10</code></em></p>	
-	
-	<?php 
-}
-
-// Button padding left and right
-function i3fb_btn_padding_lr_render( $args ) { 
-	$options = get_option( 'i3fb_settings' ); ?>
-
-		<label for='i3fb_settings[i3fb_btn_padding_left]'><?php _e('Left', 'i3fb-plugin'); ?></label>
-		<input size='10' type='text' name='i3fb_settings[i3fb_btn_padding_left]' value='<?php if (empty($options['i3fb_btn_padding_left'])) { echo '15'; }else{ echo $options['i3fb_btn_padding_left']; }; ?>'>
-
-		<label for='i3fb_settings[i3fb_btn_padding_right]'><?php _e('Right', 'i3fb-plugin'); ?></label>
-		<input size='10' type='text' name='i3fb_settings[i3fb_btn_padding_right]' value='<?php if (empty($options['i3fb_btn_padding_right'])) { echo '15'; }else{ echo $options['i3fb_btn_padding_right']; }; ?>'>
-
-	<p class="description"><em><?php _e('Enter the desired button padding. Default:', 'i3fb-plugin'); ?> <code>15</code></em></p>	
-	
-	<?php 
-}
-
 // Button typographie
 function i3fb_btn_typo_render( $args ) { 
 	$options = get_option( 'i3fb_settings' ); ?>
@@ -303,6 +255,52 @@ function i3fb_btn_typo_render( $args ) {
 			<option value='22' <?php selected( $options['i3fb_btn_typo_size'], '22' ); ?>>22px</option>
 			<option value='23' <?php selected( $options['i3fb_btn_typo_size'], '23' ); ?>>23px</option>
 			<option value='24' <?php selected( $options['i3fb_btn_typo_size'], '24' ); ?>>24px</option>
+			<option value='25' <?php selected( $options['i3fb_btn_typo_size'], '25' ); ?>>25px</option>
+			<option value='26' <?php selected( $options['i3fb_btn_typo_size'], '26' ); ?>>26px</option>
+			<option value='27' <?php selected( $options['i3fb_btn_typo_size'], '27' ); ?>>27px</option>
+			<option value='28' <?php selected( $options['i3fb_btn_typo_size'], '28' ); ?>>28px</option>
+			<option value='29' <?php selected( $options['i3fb_btn_typo_size'], '29' ); ?>>29px</option>
+			<option value='30' <?php selected( $options['i3fb_btn_typo_size'], '30' ); ?>>30px</option>
+			<option value='31' <?php selected( $options['i3fb_btn_typo_size'], '31' ); ?>>31px</option>
+			<option value='32' <?php selected( $options['i3fb_btn_typo_size'], '32' ); ?>>32px</option>
+			<option value='33' <?php selected( $options['i3fb_btn_typo_size'], '33' ); ?>>33px</option>
+			<option value='34' <?php selected( $options['i3fb_btn_typo_size'], '34' ); ?>>34px</option>
+			<option value='35' <?php selected( $options['i3fb_btn_typo_size'], '35' ); ?>>35px</option>
+			<option value='36' <?php selected( $options['i3fb_btn_typo_size'], '36' ); ?>>36px</option>
+			<option value='37' <?php selected( $options['i3fb_btn_typo_size'], '37' ); ?>>37px</option>
+			<option value='38' <?php selected( $options['i3fb_btn_typo_size'], '38' ); ?>>38px</option>
+			<option value='39' <?php selected( $options['i3fb_btn_typo_size'], '39' ); ?>>39px</option>
+			<option value='40' <?php selected( $options['i3fb_btn_typo_size'], '40' ); ?>>40px</option>
+			<option value='41' <?php selected( $options['i3fb_btn_typo_size'], '41' ); ?>>41px</option>
+			<option value='42' <?php selected( $options['i3fb_btn_typo_size'], '42' ); ?>>42px</option>
+			<option value='43' <?php selected( $options['i3fb_btn_typo_size'], '43' ); ?>>43px</option>
+			<option value='44' <?php selected( $options['i3fb_btn_typo_size'], '44' ); ?>>44px</option>
+			<option value='45' <?php selected( $options['i3fb_btn_typo_size'], '45' ); ?>>45px</option>
+			<option value='46' <?php selected( $options['i3fb_btn_typo_size'], '46' ); ?>>46px</option>
+			<option value='47' <?php selected( $options['i3fb_btn_typo_size'], '47' ); ?>>47px</option>
+			<option value='48' <?php selected( $options['i3fb_btn_typo_size'], '48' ); ?>>48px</option>
+			<option value='49' <?php selected( $options['i3fb_btn_typo_size'], '49' ); ?>>49px</option>
+			<option value='50' <?php selected( $options['i3fb_btn_typo_size'], '50' ); ?>>50px</option>
+			<option value='51' <?php selected( $options['i3fb_btn_typo_size'], '51' ); ?>>51px</option>
+			<option value='52' <?php selected( $options['i3fb_btn_typo_size'], '52' ); ?>>52px</option>
+			<option value='53' <?php selected( $options['i3fb_btn_typo_size'], '53' ); ?>>53px</option>
+			<option value='54' <?php selected( $options['i3fb_btn_typo_size'], '54' ); ?>>54px</option>
+			<option value='55' <?php selected( $options['i3fb_btn_typo_size'], '55' ); ?>>55px</option>
+			<option value='56' <?php selected( $options['i3fb_btn_typo_size'], '56' ); ?>>56px</option>
+			<option value='57' <?php selected( $options['i3fb_btn_typo_size'], '57' ); ?>>57px</option>
+			<option value='58' <?php selected( $options['i3fb_btn_typo_size'], '58' ); ?>>58px</option>
+			<option value='59' <?php selected( $options['i3fb_btn_typo_size'], '59' ); ?>>59px</option>
+			<option value='60' <?php selected( $options['i3fb_btn_typo_size'], '60' ); ?>>60px</option>
+			<option value='61' <?php selected( $options['i3fb_btn_typo_size'], '61' ); ?>>61px</option>
+			<option value='62' <?php selected( $options['i3fb_btn_typo_size'], '62' ); ?>>62px</option>
+			<option value='63' <?php selected( $options['i3fb_btn_typo_size'], '63' ); ?>>63px</option>
+			<option value='64' <?php selected( $options['i3fb_btn_typo_size'], '64' ); ?>>64px</option>
+			<option value='65' <?php selected( $options['i3fb_btn_typo_size'], '65' ); ?>>65px</option>
+			<option value='66' <?php selected( $options['i3fb_btn_typo_size'], '66' ); ?>>66px</option>
+			<option value='67' <?php selected( $options['i3fb_btn_typo_size'], '67' ); ?>>67px</option>
+			<option value='68' <?php selected( $options['i3fb_btn_typo_size'], '68' ); ?>>68px</option>
+			<option value='69' <?php selected( $options['i3fb_btn_typo_size'], '69' ); ?>>69px</option>
+			<option value='70' <?php selected( $options['i3fb_btn_typo_size'], '70' ); ?>>70px</option>
 		</select>
 
 		<select data-placeholder='Normal' style='width:100px;' class='chosen-select' name='i3fb_settings[i3fb_btn_typo_style]'>

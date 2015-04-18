@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: i3 Feedback Button v1.2\n"
+"Project-Id-Version: i3 Feedback Button v1.3\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-04-04 14:10:25+0000\n"
+"PO-Revision-Date: 2015-04-18 16:35:27+0000\n"
 "Last-Translator: admin <mo@moscouch.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -35,7 +35,7 @@ msgstr "Thickbox Einstellungen"
 msgid "Button links to"
 msgstr "Button Verlinkung"
 
-#: admin-page/i3fb-admin-page.php:154
+#: admin-page/i3fb-admin-page.php:136
 #@ i3fb-plugin
 msgid "Button text"
 msgstr "Button Beschriftung"
@@ -55,93 +55,70 @@ msgstr "Button oberer Abstand (%)"
 msgid "Button background color"
 msgstr "Button Hintergrundfarbe"
 
-#: admin-page/i3fb-admin-page.php:175
+#: admin-page/i3fb-admin-page.php:157
 #@ i3fb-plugin
 msgid "Thickbox height (px)"
 msgstr "Thickbox Höhe (px)"
 
-#: admin-page/i3fb-admin-page.php:184
+#: admin-page/i3fb-admin-page.php:166
 #@ i3fb-plugin
 msgid "Thickbox width (px)"
 msgstr "Thickbox Breite (px)"
 
-#: admin-page/i3fb-admin-page.php:202
+#: admin-page/i3fb-admin-page.php:184
 #@ i3fb-plugin
 msgid "Select a Page"
 msgstr "Wähle eine Seite"
 
 #: admin-page/i3fb-admin-page.php:209
 #@ i3fb-plugin
-msgid "Define the page you want to oben in the Thickbox window."
-msgstr "Lege fest, welche Seite in dem Thickbox-Fenster geöffnet werden soll."
-
-#: admin-page/i3fb-admin-page.php:227
-#: admin-page/i3fb-admin-page.php:271
-#@ i3fb-plugin
 msgid "Left"
 msgstr "Links"
 
-#: admin-page/i3fb-admin-page.php:228
-#: admin-page/i3fb-admin-page.php:274
+#: admin-page/i3fb-admin-page.php:210
 #@ i3fb-plugin
 msgid "Right"
 msgstr "Rechts"
 
-#: admin-page/i3fb-admin-page.php:238
-#: admin-page/i3fb-admin-page.php:330
-#: admin-page/i3fb-admin-page.php:340
+#: admin-page/i3fb-admin-page.php:220
+#: admin-page/i3fb-admin-page.php:328
+#: admin-page/i3fb-admin-page.php:338
 #@ i3fb-plugin
 msgid "Default:"
 msgstr "Standart:"
 
-#: admin-page/i3fb-admin-page.php:351
+#: admin-page/i3fb-admin-page.php:349
 #@ i3fb-plugin
 msgid "Change content and visual style of the Feedback Button."
 msgstr "Hier kannst du das Aussehen und die Verlinkung des Buttons ändern."
 
-#: admin-page/i3fb-admin-page.php:356
+#: admin-page/i3fb-admin-page.php:354
 #@ i3fb-plugin
 msgid "Change the size of the Thickbox window."
 msgstr "Hier kannst du die Größe des Thickbox-Fensterns anpassen."
 
-#: admin-page/i3fb-admin-page.php:366
+#: admin-page/i3fb-admin-page.php:364
 #@ i3fb-plugin
 msgid "Feedback Button Settings"
 msgstr "Feedback Button Einstellungen"
 
-#: admin-page/i3fb-admin-page.php:136
-#@ i3fb-plugin
-msgid "Button Padding Top/Bottom (px)"
-msgstr "Button Textabstand oben/unten (px)"
-
 #: admin-page/i3fb-admin-page.php:145
-#@ i3fb-plugin
-msgid "Button Padding Left/Right (px)"
-msgstr "Button Textabstand links/rechts (px)"
-
-#: admin-page/i3fb-admin-page.php:163
 #@ i3fb-plugin
 msgid "Button Typographie"
 msgstr "Button Typografie"
 
-#: admin-page/i3fb-admin-page.php:256
-#@ i3fb-plugin
-msgid "Top"
-msgstr "Oben"
-
-#: admin-page/i3fb-admin-page.php:259
-#@ i3fb-plugin
-msgid "Bottom"
-msgstr "Unten"
-
-#: admin-page/i3fb-admin-page.php:262
-#: admin-page/i3fb-admin-page.php:277
-#@ i3fb-plugin
-msgid "Enter the desired button padding. Default:"
-msgstr "Gebe den gewünschten Textabstand ein. Standart:"
-
-#: admin-page/i3fb-admin-page.php:318
+#: admin-page/i3fb-admin-page.php:316
 #@ i3fb-plugin
 msgid "Select typography for the button."
 msgstr "Bearbeite die Typografie des Buttons."
+
+#: admin-page/i3fb-admin-page.php:191
+#@ i3fb-plugin
+msgid "Define the page you want to open in the Thickbox window."
+msgstr "Wähle die Seite aus, welche im Thickbox-Fenster geöffnet werden soll."
+
+#: i3-feedback-button.php:103
+#@ i3fb-plugin
+msgid "Feedback"
+msgstr "Feedback"
 
