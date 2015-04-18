@@ -37,6 +37,9 @@ Visit `Settings > Feedback Button` to select a page and change other options.
 
 ## Changelog
 
+### 1.5
+* Fixed left / right position variables
+
 ### 1.4
 * Removed padding options / added default padding
 * Button size via font-size

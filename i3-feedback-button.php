@@ -4,7 +4,7 @@ Plugin Name: i3 Feedback Button
 Plugin URI: 
 Description: Displays a static button, on the left or right side of the website, which lets you open a page in an thickbox window.
 Author: Mo
-Version: 1.4
+Version: 1.5
 Author URI: 
 */
 

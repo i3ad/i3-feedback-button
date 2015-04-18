@@ -206,8 +206,8 @@ function i3fb_btn_txt_field_render(  ) {
 function i3fb_btn_pos_field_render(  ) { 
 	$options = get_option( 'i3fb_settings' ); ?>
 
-	<label><?php _e('Left', 'i3fb-plugin'); ?> <input type='radio' name='i3fb_settings[i3fb_btn_pos_field]' <?php if (empty($options['i3fb_btn_pos_field'])) { echo 'checked=checked'; }else{ echo checked( $options['i3fb_btn_pos_field'], left ); }; ?> value='left'></label>
-	<label><?php _e('Right', 'i3fb-plugin'); ?> <input type='radio' name='i3fb_settings[i3fb_btn_pos_field]' <?php checked( $options['i3fb_btn_pos_field'], right ); ?> value='right'></label>
+	<label><?php _e('Left', 'i3fb-plugin'); ?> <input type='radio' name='i3fb_settings[i3fb_btn_pos_field]' <?php if (empty($options['i3fb_btn_pos_field'])) { echo 'checked=checked'; }else{ echo checked( $options['i3fb_btn_pos_field'], 'left' ); }; ?> value='left'></label>
+	<label><?php _e('Right', 'i3fb-plugin'); ?> <input type='radio' name='i3fb_settings[i3fb_btn_pos_field]' <?php checked( $options['i3fb_btn_pos_field'], 'right' ); ?> value='right'></label>
 	
 	<?php
 }
